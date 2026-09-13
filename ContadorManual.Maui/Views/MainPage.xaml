@@ -6,14 +6,13 @@
     
     <!-- Para comentar en el xml: ctrl+k+C  -->
     <!-- edicion del cuerpo: -->
-    <StackLayout 
-        Orientation="Vertical"     
+    <!-- Para ahorrar codigo cambiamos al StackLayout por VerticalStackLayout -->
+    <VerticalStackLayout      
         Spacing="15" 
         Margin="12"
         Padding="16">
         
-        <!-- Horizontal options no funciona para un stacklayout de orientacion horizontal, 
-        aplica Vertical Options -->
+      <!-- Horizontal options no funciona para un stacklayout de orientacion horizontal, aplica Vertical Options -->
         <Label 
             Text="Conteo:" 
             HorizontalOptions="Fill"
@@ -38,8 +37,8 @@
 
         <!-- se puede poner otro stacklayout dentro de uno existente: -->
         
-        <StackLayout 
-           Orientation="Horizontal" 
+        <StackLayout
+           Orientation="Horizontal"
            HorizontalOptions="Center"
            Spacing="24"
            Margin="0,24,0,0">
@@ -58,7 +57,7 @@
        
         
          
-    </StackLayout>
+    </VerticalStackLayout>
 
 
 </ContentPage>
