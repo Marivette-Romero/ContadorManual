@@ -22,41 +22,39 @@
         <Border 
             Stroke="Gray"
             StrokeThickness="2">
-           
+
+            <!--Retiramos esto x:Name="ConteoLabel" por el enlace de datos-->
             <Label 
-                Text="10" 
+                Text="{Binding Path=Conteo}" 
                 Padding="0,24"
                 HorizontalOptions="Center"
                 FontSize="Large"
                 FontAttributes="Bold"
-                x:Name="ConteoLabel"
             
             />
             
         </Border>
 
         <!-- se puede poner otro stacklayout dentro de uno existente: -->
-        
+
         <StackLayout
            Orientation="Horizontal"
            HorizontalOptions="Center"
            Spacing="24"
            Margin="0,24,0,0">
-           
-           <Button
+
+            <Button
             Text="Contar"
             Clicked="OnContarButtonClicked" 
            />
 
-           <Button 
+            <Button 
              Text="Reiniciar"
              Clicked="OnReiniciarButtonClicked"
            />
 
-       </StackLayout>
-       
-        
-         
+        </StackLayout>
+
     </VerticalStackLayout>
 
 
