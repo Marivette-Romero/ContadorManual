@@ -1,7 +1,6 @@
 namespace ContadorManual.Maui.Views;
 using ContadorManual.Maui.Models;
 
-
 //22/09/2026: Actualizacion a enlace de datos a un objeto de datos.
 public partial class MainPage : ContentPage
 {
@@ -25,4 +24,10 @@ public partial class MainPage : ContentPage
 		_contador.Reiniciar();
 		//ConteoLabel.Text=_contador.Conteo.ToString() ;
     }
+
+	/*23/09/2026 Nuevo controlador de eventos
+    private void OnIncrementoStepperValueChanged(object sender, ValueChangedEventArgs e)
+    {
+		_contador.Incremento = (int)IncrementoStepper.Value;
+    }*/
 }

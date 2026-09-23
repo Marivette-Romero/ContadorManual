@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
+//22/09/2026: Actualizacion a enlace de datos a un objeto de datos.
 namespace ContadorManual.Maui.Models
 {
     public class Contador :INotifyPropertyChanged //agregar esto 22/09
     {
         private int _Conteo; //variable de instancia
+        private int _Incremento; // 23/09/2026: Nueva variable de instancia
 
-        public event PropertyChangedEventHandler? PropertyChanged; //Linea Nueva 22/09
+        public event PropertyChangedEventHandler? PropertyChanged; //Linea Nueva 22/09 : Metodo
 
         //Modificamos:
         public int Conteo
@@ -24,7 +26,27 @@ namespace ContadorManual.Maui.Models
                 }
             }
         }
-        
+
+        //Nuevo metodo
+        public int Incremento
+        {
+            get => _Incremento;
+            set
+            {
+                if (_Incremento != value)
+                {
+                    _Incremento = value;
+                }
+            }
+        }
+
+        // 23/09/2026: Nuevo Constructor
+        public Contador (int ValorInicial =0 , int incremento=1)
+        {
+            Conteo =ValorInicial;
+            Incremento =incremento;
+        }
+
         public Contador() //constructor
          { 
             Conteo= 0;
@@ -32,7 +54,7 @@ namespace ContadorManual.Maui.Models
      
         public void Contar()
         {
-            Conteo++;
+            Conteo= Conteo +Incremento; //Modificamos 23/09/2023
         }
         public void Reiniciar()
         {
@@ -47,6 +69,7 @@ namespace ContadorManual.Maui.Models
                 PropertyChanged.Invoke( this, new PropertyChangedEventArgs( propertyName ) );
             }
         }
+
 
     }
 }
